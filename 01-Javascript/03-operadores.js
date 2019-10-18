@@ -51,3 +51,4 @@ const respuestaEvery = arreglo.every( // transaformar o mutar arreglo
     }//Expresion
 );//Devuelve -> Booleano
 console.log('respuestaEvery', respuestaEvery);
+const respuestaMenoresADiez =arreglo.map(x=>(x/2)+7).some(y=>y<10);
