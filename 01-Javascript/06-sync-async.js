@@ -1,85 +1,106 @@
 const fileSystem = require('fs');
-
 console.log('1) Iniciando');
+
+
 fileSystem.readFile(
-    './05-callbaks.js',
+    './05-callbacks.js',
     'utf8',
-    callbackLeerArchivo
+    callbackLeerArchivo,
 );
 
-console.log('2) Finalizando');
-
 function callbackLeerArchivo(error, datos){
-    if (error){
+    if(error){
         console.error({
             mensaje: 'Error leyendo archivo',
-            //error: error,
+            //error: error
             error,
         })
-    }else {
-        console.log('Datos: 05', datos);
+    }else{
+        console.log('################################################################## ARCHIVO 5 #########################################################');
+        console.log('Datos 05: ', datos);
+        fileSystem.readFile(
+            './04-Funciones.js',
+            'utf8',
+            callbackLeerArchivo2,
+        );
+    }
+}
+
+
+function callbackLeerArchivo2(error, datos){
+    if(error){
+        console.error({
+            mensaje: 'Error leyendo archivo',
+            //error: error
+            error,
+        })
+    }else{
+        console.log('################################################################## ARCHIVO 4 #########################################################');
+        console.log('Datos 04: ', datos);
         fileSystem.readFile(
             './03-operadores.js',
             'utf8',
-            callbackLeerArchivo1
+            callbackLeerArchivo3,
         );
-       
     }
-    
 }
-function callbackLeerArchivo1(error, datos){
-    if (error){
+function callbackLeerArchivo3(error, datos){
+    if(error){
         console.error({
             mensaje: 'Error leyendo archivo',
-            //error: error,
+            //error: error
             error,
         })
-    }else {
-        console.log('Datos: 03', datos);
-        
+    }else{
+        console.log('################################################################## ARCHIVO 3 #########################################################');
+        console.log('Datos 03: ', datos);
         fileSystem.readFile(
-            './objetos.js',
+            './02-objetos.js',
             'utf8',
-            callbackLeerArchivo2
+            callbackLeerArchivo4,
         );
     }
-    
 }
-function callbackLeerArchivo2(error, datos){
-    if (error){
+
+function callbackLeerArchivo4(error, datos){
+    if(error){
         console.error({
             mensaje: 'Error leyendo archivo',
-            //error: error,
+            //error: error
             error,
         })
-    }else {
-        console.log('Datos: 02', datos);
+    }else{
+        console.log('################################################################## ARCHIVO 2 #########################################################');
+        console.log('Datos 02: ', datos);
         fileSystem.readFile(
             './01-variables.js',
             'utf8',
-            callbackLeerArchivo3
+            callbackLeerArchivo5,
         );
     }
-    
 }
-function callbackLeerArchivo3(error, datos){
-    if (error){
+
+function callbackLeerArchivo5(error, datos){
+    if(error){
         console.error({
             mensaje: 'Error leyendo archivo',
-            //error: error,
+            //error: error
             error,
         })
-    }else {
-        console.log('Datos: 01', datos);
+    }else{
+        console.log('################################################################## ARCHIVO 1 #########################################################');
+
+        console.log('Datos 01: ', datos);
     }
-    
 }
 
 
-//PROMESAS
 
-fileSystem.readFile(
-    './05-callbaks.js',
-    'utf8',
-    callbackLeerArchivo
-);
+
+
+
+/*() => { // las funciones que devuelven algo que no se ejecuta al principio se llaman callbacks
+       // son asincronas
+       console.log('3) Leyendo archivo');
+   }*/
+//funciones - operadores - objetos y variables

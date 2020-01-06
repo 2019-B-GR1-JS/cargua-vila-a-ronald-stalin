@@ -1,105 +1,67 @@
 // JSON
-// var nombre = "Ronald";
-// Mutable (No queremos)
-let nombre = "Ronlad";
-nombre = "Miguel";
+// var nombre= 'Adrian'
+// Mutable --> reasignar a una variable otro valor (no les gusta a
+// los desarrolladores)
+let nombre = 'Miguel';
+nombre = 'Angel';
 nombre = 1;
-// No mutables Inmutable (No cambia)
-const cedula = 1722861042;
-const mensaje = `
+// Algo que no cambia --> No mutables
+const cedula = 1722305230;
+const menaje = `
 Siempre usar "const"
-Si ya toca usar "let"
-Nunca vamos a usar "var"
+si ya toca usar "let"
+y nunca usar "var"
 `;
-// Datos primitivos
-let nombres = "Ronald";
+
+
+// DATOS PRIMITIVOS
+
+let nombres = "Adrian";
 console.log(typeof nombres, 'nombres');
 let numeros = 1;
 console.log(typeof numeros, 'numeros');
-numeros = 1.1
-console.log(typeof numeros, 'numeros decila')
+numeros = 1.1;
+console.log(typeof numeros, 'numeros decimales');
 let casado = false;
-console.log(typeof casado, 'casados');
+console.log(typeof casado, 'casado');
 let hijos = null;
 console.log(typeof hijos, 'hijos');
 let mascotas = [];
-console.log(typeof  mascotas, 'mascotas');
+console.log(typeof mascotas, 'mascotas')
 let hermana = {};
-console.log(typeof hermana, 'hermana');
-//Condicion!
-// Truty
-//Falsy
-if ("") {
-    console.log("Truty");
-} else {
-    console.log("Falsy"); // Falsy
-}
+console.log(typeof hermana, 'hermana')
 
 
-if ("a") {
-    console.log("Truty"); // Truty
-} else {
-    console.log("Falsy");
-}
-
-if (-1) {
-    console.log("Truty"); // Truty
-} else {
-    console.log("Falsy");
-}
-
-
-if (0) {
-    console.log("Truty");
-} else {
-    console.log("Falsy"); // Falsy
-}
-
-if (1) {
-    console.log("Truty"); // Truty
-} else {
-    console.log("Falsy");
-}
-
-
-if (null) {
-    console.log("Truty");
-} else {
-    console.log("Falsy"); // Falsy
-}
-
-if ({}) {
-    console.log("Truty"); // Truty
-} else {
-    console.log("Falsy");
-}
+//CONDICION
+// TRUTY and FALSY
 
 if ([]) {
-    console.log("Truty"); // Truty
+    console.log('Es truty');
 } else {
-    console.log("Falsy");
+    console.log('Es falsy');
 }
 
 // JSON - JS
-const adrian = {
-    "nombre": 'Adrian',
-    'apellido': "Eguez Sarzosa",
-    edad: 10,
+const miguel = {
+    nombre: "Miguel",
+    apellido: "Parra",
+    edad: 24,
     casado: false,
     hijos: null,
-    hermana: {nombre: "Carolina"},
-    mascotas: [
-        {
-            nombre: "Cachetes",
-        }
-    ],
-};
-console.log(adrian.nombre); // Adrian
-console.log(adrian.hermana); // { nombre: "Carolina" }
+    hermana: {nombre: 'Pamela'},
+    mascotas: [{
+        nombre: 'Cachetes',
+    }],
+}
+console.log(miguel.nombre) // Miguel
+console.log(miguel.hermana) // {nombre: 'Pamela')
 console.log(adrian.mascotas[0].nombre);
-adrian.sueldo = 1.2;
-adrian["deudas"] = 10000;
-console.log(adrian);
-delete adrian.hijos;
-console.log(adrian);
 
+//Agregar propiedades a un objeto JSON
+miguel.sueldo = 1.2;
+miguel["deudas"] = 10000;
+console.log(miguel)
+
+// para borrar propiedades de un objeto JSON
+delete miguel.hijos;
+console.log(miguel);
